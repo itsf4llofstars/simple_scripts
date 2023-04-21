@@ -3,9 +3,9 @@
 
 set -e
 
-HOMEDIR=/home/bumper
-TARDIRPNY=/media/bumper/PNY32G/mint
-TARDIRSCN=/media/bumper/SCANDSK/mint
+HOMEDIR=/home/"$USER"
+TARDIRPNY=/media/"$USER"/PNY32G/mint
+TARDIRSCN=/media/"$USER"/SCANDSK/mint
 tarfile=
 
 if [ -d "$TARDIRPNY" ]; then
