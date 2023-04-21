@@ -1,6 +1,8 @@
 #!/bin/sh
 # Anacron weekly backup mint distro
 
+# TODO: Add doc on how to use/change $USER for use as anacron
+
 set -e
 
 HOMEDIR=/home/"$USER"
