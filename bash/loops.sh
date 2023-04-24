@@ -21,4 +21,13 @@ do
   printf "%s\n" "Word: $var"
 done
 
+echo
+
+for (( n=0; n<=10; ++n))
+do
+  printf "%s\n" "n = $n"
+done
+
+echo
+
 exit 0
