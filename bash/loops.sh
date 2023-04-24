@@ -41,16 +41,23 @@ do
 
         if [ "$rand" -gt 20000 ]
         then
+            echo "break 2"
             break 2
         elif [ "$rand" -lt 10000 ]
         then
+            echo "break"
             break
         fi
     done
-
-    sleep 3
 done
 
 echo
+
+for n in {1..9}
+do
+    rand=$RANDOM
+    [ $rand -le 20000 ] && continue
+    echo "n = $n rand = $rand"
+done
 
 exit 0
