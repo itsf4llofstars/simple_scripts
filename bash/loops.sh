@@ -16,4 +16,9 @@ done
 
 echo
 
+for var in bacon butter beans
+do
+  printf "%s\n" "Word: $var"
+done
+
 exit 0
