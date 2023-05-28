@@ -27,7 +27,7 @@ To use this as a crontab you will need crontab installed. Installation is beyond
 scope of this repository, but it can be checked with:
 
 ```bash
-~ $ crontab -l
+$ crontab -l
 ```
 
 This should print a list of the currently used crontabs.
@@ -35,7 +35,7 @@ This should print a list of the currently used crontabs.
 Adding reboot.sh to the crontab is done by:
 
 ```bash
-~ $ crontab -e
+$ crontab -e
 ```
 
 > At the end of the crontab add<br>
