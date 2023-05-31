@@ -47,7 +47,7 @@ def copy_files(dest_dir: str, files) -> None:
 
 
 def make_tar(base, filename, ext, root):
-    """Create an archive in base, named filename witht he extension
+    """Create an archive in base, named filename with the extension
     ext from the root path
     """
     shutil.make_archive(
