@@ -57,7 +57,7 @@ def make_tar(base, filename, ext, root):
     )
 
 
-def main(args):
+def main():
     directory = "temp_dir"
     base_dir = "archives"
     tar_name = "py_dotfiles"
@@ -83,4 +83,4 @@ def main(args):
 
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv))
+    sys.exit(main())
