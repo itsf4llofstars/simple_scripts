@@ -78,7 +78,7 @@ def main(args):
     create_directory(directory)
 
     if check_directory(directory):
-        copy_files("temp_dir", file_names)
+        copy_files(directory, file_names)
         make_tar(base_dir, tar_name, tar_ext, directory)
 
 
