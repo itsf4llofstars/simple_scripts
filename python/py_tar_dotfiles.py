@@ -1,4 +1,4 @@
-"""main_functions.py"""
+"""main_functions Python File"""
 import os
 import shutil
 import sys
@@ -42,9 +42,7 @@ def copy_files(dest_dir: str, files) -> None:
         if os.path.isfile(os.path.expanduser(os.path.join("~", name))):
             shutil.copy(
                 os.path.expanduser(os.path.join("~", name)),
-                os.path.expanduser(
-                    os.path.join("~", dest_dir, name[1:] + ".bak")
-                ),
+                os.path.expanduser(os.path.join("~", dest_dir, name[1:] + ".bak")),
             )
 
 
