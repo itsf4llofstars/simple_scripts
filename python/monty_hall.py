@@ -27,20 +27,20 @@ if DOORS[picked_door] == "gold":  # Will always show 1st non-picked door
         if picked_door == door:
             continue
         show_door = door
-        print(f"Your door: {picked_door}, door {door}: {prize}")
+        print(f"Your door: {picked_door}, door {door}: {DOORS[door]}")
         break
 elif DOORS[picked_door] == "goat":
     for door, prize in DOORS.items():
         if picked_door == door or prize == "gold":
             continue
         show_door = door
-        print(f"Your door: {picked_door}, door {door}: {prize}")
+        print(f"Your door: {picked_door}, door {door}: {DOORS[door]}")
 elif DOORS[picked_door] == "fleas":
     for door, prize in DOORS.items():
         if picked_door == door or prize == "gold":
             continue
         show_door = door
-        print(f"Your door: {picked_door}, door {door}: {prize}")
+        print(f"Your door: {picked_door}, door {door}: {DOORS[door]}")
 
 switch = input("Do you want to swith? [y/n]")
 if switch == "y":
