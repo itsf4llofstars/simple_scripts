@@ -1,67 +1,39 @@
 #!/usr/bin/env python3
+"""monty_hall.py"""
 import random
-import sys
 
 doors = ["one", "two", "three"]
-prizes = ["goat", "gold", "goat"]
+prizes = ["goat", "gold", "fleas"]
 
-door_dict = {
+DOORS = {
     "1": "",
     "2": "",
     "3": "",
 }
 
-win, lose = 0, 0
+random.shuffle(prizes)
 
-for _ in range(len(prizes) ** len(prizes)):
-    random.shuffle(prizes)
+INDEX = 0
+for door in DOORS:
+    DOORS[door] = prizes[INDEX]
+    INDEX += 1
 
-index = 0
-for k in door_dict.keys():
-    door_dict[k] = prizes[index]
-    index += 1
-del index
+picked_door = input("Pick your door: ")
+# picked_door = "2"
 
-for k, v in door_dict.items():
-    print(k, v)
-print()
-
-# for testing
-# door_choice = input("Enter your door choice 1, 2, 3: ")
-door_choice = "2"
-
-show_door = ""
-for door in door_dict.keys():
-    if door == door_choice or door_dict[door] == "gold":
-        continue
-    show_door = door
-    print(f"Door: {show_door} is a {door_dict[door]}")
-
-swap: bool = None
-
-# for testing
-# switch = input("Do you want to switch [y/n]? ")
-switch = "y"
-
-if switch == "y":
-    swap = True
-else:
-    swap = False
-
-if swap:
-    for door in door_dict.keys():
-        if door_dict[door] == "gold":
-            win += 1
-        else:
-            lose += 1
-else:
-    if door_dict[door_choice] == "gold":
-        win += 1
-    else:
-        lose += 1
-
-print()
-print(door_choice)
-for k, v in door_dict.items():
-    print(k, v)
-print(f"{win = } {lose = }")
+if DOORS[picked_door] == "gold":  # Will always show 1st non-picked door
+    for door in DOORS:
+        if picked_door == door:
+            continue
+        print(f"Your door: {picked_door}, door {door}: {DOORS[door]}")
+        break
+elif DOORS[picked_door] == "goat":
+    for door in DOORS:
+        if picked_door == door or DOORS[door] == "gold":
+            continue
+        print(f"Your door: {picked_door}, door {door}: {DOORS[door]}")
+elif DOORS[picked_door] == "fleas":
+    for door in DOORS:
+        if picked_door == door or DOORS[door] == "gold":
+            continue
+        print(f"Your door: {picked_door}, door {door}: {DOORS[door]}")
